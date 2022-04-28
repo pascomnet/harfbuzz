@@ -9,6 +9,8 @@ project('harfbuzz', 'c', 'cpp',
   ],
 )
 
+add_project_arguments('-DHB_NO_PRAGMA_GCC_DIAGNOSTIC_ERROR', language: ['c', 'cpp'])
+
 hb_version_arr = meson.project_version().split('.')
 hb_version_major = hb_version_arr[0].to_int()
 hb_version_minor = hb_version_arr[1].to_int()
